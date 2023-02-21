@@ -39,12 +39,25 @@ namespace QueenAttack.Models
       _targetX = targetCoordinateX;
       _targetY = targetCoordinateY;
     }
-    // business logic
-   // Dictionary<string, int> QueenPosition = new Dictionary<string, int>();
+    
+    public bool Capture()
+    {
+      if (QueenX == TargetX || QueenY == TargetY)
+      {
+        return true;
+      }
+      else 
+      {
+        return false;
+      }
+    }
+    
 
   }
 }
 
+    // business logic
+   // Dictionary<string, int> QueenPosition = new Dictionary<string, int>();
 // // code where i stopped ---------------------------copied from Phat
 // using System.Collections.Generic;
 

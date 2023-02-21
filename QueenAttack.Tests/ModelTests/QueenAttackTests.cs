@@ -61,7 +61,7 @@ namespace QueenAttack.Tests
     
     }
     [TestMethod] //6
-    public void GetTargetXAndY_ReturnsTargetXAndY_Int()
+    public void GetAndSetTargetXAndY_ReturnsTargetXAndY_IntAndInt()
     {
       //arrange
       int TargetX = 6;
@@ -75,7 +75,30 @@ namespace QueenAttack.Tests
       Assert.AreEqual(TargetY, resultY);
 
     }
-    
+    [TestMethod] //7
+    public void StraightCapture_ReturnsTrueWhenQueenAndTargetShareACoordinate_bool()
+    {
+      //arrange
+      Board newBoard = new Board(1, 4, 5, 4);
+      //act 
+      bool result = newBoard.Capture();
+      //assert
+      Assert.AreEqual(true, result);
+
+    }
+    // [TestMethod] //8
+    // public void DiagonalCapture_ReturnsTrueWhenQueenAndTargetOnSameDiagonal_bool()
+    // {
+    //   //arrange
+    //   Board newBoard = new Board(1, 4, 1, 2);
+    //   //act
+    //   int resultX = newBoard.TargetX;
+    //   int resultY = newBoard.TargetY;
+    //   //assert
+    //   Assert.AreEqual(TargetX, resultX);
+    //   Assert.AreEqual(TargetY, resultY);
+
+    // }
     //arrange
     //act
     //assert
