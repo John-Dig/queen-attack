@@ -24,8 +24,33 @@ namespace QueenAttack.Tests
       //assert
       Assert.AreEqual(QueenX, result);
     }
+    [TestMethod] //3
+    public void SetQueenX_SetsValueOfQueenX_Void()
+    {
+      //arrange
+      Board newBoard = new Board(1);
+      int newQueenX = 5;
+      //act
+      newBoard.QueenX = newQueenX;
+      //assert  
+      Assert.AreEqual(newQueenX, newBoard.QueenX);
+    }
+    
     //arrange
     //act
     //assert
+    
+    //arrange
+    //act
+    //assert
+    
+    //arrange
+    //act
+    //assert
+    
+    //arrange
+    //act
+    //assert
+
   }
 }
