@@ -13,7 +13,7 @@ namespace QueenAttack.Models
 using System.Collections.Generic;
 
 // create a dictionary with string keys and int values
-Dictionary<string, int> myDictionary = new Dictionary<string, int>();
+Dictionary<string, int> myDictionary = new Dictionary<gistring, int>();
 
 // add key-value pairs to the dictionary
 myDictionary.Add("x", qx);
