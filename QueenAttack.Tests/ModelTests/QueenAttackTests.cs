@@ -86,22 +86,20 @@ namespace QueenAttack.Tests
       Assert.AreEqual(true, result);
 
     }
-    // [TestMethod] //8
-    // public void DiagonalCapture_ReturnsTrueWhenQueenAndTargetOnSameDiagonal_bool()
-    // {
-    //   //arrange
-    //   Board newBoard = new Board(1, 4, 1, 2);
-    //   //act
-    //   int resultX = newBoard.TargetX;
-    //   int resultY = newBoard.TargetY;
-    //   //assert
-    //   Assert.AreEqual(TargetX, resultX);
-    //   Assert.AreEqual(TargetY, resultY);
+    [TestMethod] //8
+    public void DiagonalCapture_ReturnsTrueWhenQueenAndTargetOnSameDiagonal_bool()
+    {
+      //arrange
+      Board newBoard = new Board(1, 1, 8, 8);
+      //act
+      bool result = newBoard.Capture();
+      //assert
+      Assert.AreEqual(true, result);
 
-    // }
-    //arrange
-    //act
-    //assert
+    }
+    // arrange
+    // act
+    // assert
 
   }
 }
