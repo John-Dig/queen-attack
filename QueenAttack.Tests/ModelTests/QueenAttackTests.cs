@@ -1,3 +1,4 @@
+using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using QueenAttack.Models;
 
@@ -46,7 +47,19 @@ namespace QueenAttack.Tests
     //assert
     Assert.AreEqual(QueenY, result);
     }
+    [TestMethod] //5
+    public void SetQueenY_SetsValueOfQueenY_Void()
+    {
+    //arrange
+    Board newBoard = new Board(1, 4);
+    int newQueenY = 8;
+    //act
+    newBoard.QueenY = newQueenY;
+    //assert
+    Console.WriteLine($"newboard.QueenY {newBoard.QueenY}");
+    Assert.AreEqual(newQueenY, newBoard.QueenY);
     
+    }
     //arrange
     //act
     //assert
