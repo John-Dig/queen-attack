@@ -7,7 +7,7 @@ namespace QueenAttack
   {
     static void Main()
     {
-      Board testBoard = new Board(2, 2);
+      Board testBoard = new Board(1, 2, 3, 4);
       Console.WriteLine(testBoard);
     }
   }

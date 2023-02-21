@@ -11,7 +11,7 @@ namespace QueenAttack.Tests
     [TestMethod] //1
     public void BoardConstructor_CreatesInstanceOfBoard_Board()
     {
-      Board newBoard = new Board(1, 4);
+      Board newBoard = new Board(1, 4, 7, 8);
       Assert.AreEqual(typeof(Board), newBoard.GetType());
     }
     [TestMethod] //2
@@ -19,7 +19,7 @@ namespace QueenAttack.Tests
     {
       //arrange
       int QueenX = 1;
-      Board newBoard = new Board(QueenX, 4);
+      Board newBoard = new Board(QueenX, 4, 7, 8);
       //act
       int result = newBoard.QueenX;
       //assert
@@ -29,7 +29,7 @@ namespace QueenAttack.Tests
     public void SetQueenX_SetsValueOfQueenX_Void()
     {
       //arrange
-      Board newBoard = new Board(1, 4);
+      Board newBoard = new Board(1, 4, 7, 8);
       int newQueenX = 5;
       //act
       newBoard.QueenX = newQueenX;
@@ -41,7 +41,7 @@ namespace QueenAttack.Tests
     {
     //arrange
     int QueenY = 4;
-    Board newBoard = new Board(1, QueenY);
+    Board newBoard = new Board(1, QueenY, 7, 8);
     //act
     int result = newBoard.QueenY;
     //assert
@@ -51,7 +51,7 @@ namespace QueenAttack.Tests
     public void SetQueenY_SetsValueOfQueenY_Void()
     {
     //arrange
-    Board newBoard = new Board(1, 4);
+    Board newBoard = new Board(1, 4, 7, 8);
     int newQueenY = 8;
     //act
     newBoard.QueenY = newQueenY;
@@ -60,13 +60,21 @@ namespace QueenAttack.Tests
     Assert.AreEqual(newQueenY, newBoard.QueenY);
     
     }
-    //arrange
-    //act
-    //assert
-    
-    //arrange
-    //act
-    //assert
+    [TestMethod] //6
+    public void GetTargetXAndY_ReturnsTargetXAndY_Int()
+    {
+      //arrange
+      int TargetX = 6;
+      int TargetY = 8;
+      Board newBoard = new Board(1, 4, TargetX, TargetY);
+      //act
+      int resultX = newBoard.TargetX;
+      int resultY = newBoard.TargetY;
+      //assert
+      Assert.AreEqual(TargetX, resultX);
+      Assert.AreEqual(TargetY, resultY);
+
+    }
     
     //arrange
     //act
