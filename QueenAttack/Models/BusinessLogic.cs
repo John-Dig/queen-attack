@@ -4,9 +4,22 @@ namespace QueenAttack.Models
 {
   public class Board
   {
-    public Board()
+    private int _queenX;
+    public int QueenX
     {
-      
+      get { return _queenX; }
+      set { _queenX = value; }
+    }
+    private int _queenY;
+    public int QueenY
+    {
+      get { return _queenY; }
+      set { _queenY = value; }
+    }
+    public Board(int coordinateX, int coordinateY)
+    {
+      _queenX = coordinateX;
+      _queenY = coordinateY;
     }
     // business logic
    // Dictionary<string, int> QueenPosition = new Dictionary<string, int>();
