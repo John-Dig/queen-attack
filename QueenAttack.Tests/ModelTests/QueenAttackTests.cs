@@ -99,9 +99,25 @@ namespace QueenAttack.Tests
       Assert.IsTrue(resultDiag || resultStraight);
 
     }
-    
+    [TestMethod] //9 THIS WILL NEED TO BE RE WRITTEN-------------~_~_~_~__~_
+    public void InputXX_CreatesNewBoardWithAllCoordinates_value();
+    {
+      //arrange
+      Board newBoard = new Board(0,0,0,0);
+      //act
+      int qX = newBoard.InputQX();
+      int qY = newBoard.InputQY();
+      int tX = newBoard.InputTX();
+      int tY = newBoard.InputTY();
+
+      Board gameBoard = new Board (qX, qY, tX, tY);
+
+      //assert
+
+
+    }
   
-//phat test
+//for checking Dictionary values
 // [TestMethod]
 // public void Get_It_MuffinTesting_Dict_output()
 // {

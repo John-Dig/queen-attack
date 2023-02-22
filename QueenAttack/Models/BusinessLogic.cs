@@ -106,36 +106,38 @@ namespace QueenAttack.Models
       return Capture;
     }
     }
+    
+    // newMethod() //need to rewrite this 
+    // {
+    //   public void InputQX()
+    //   {
+    //     Console.WriteLine("Enter Queen's X coordinate");
+    //     string inputX = Console.ReadLine();
+    //     int coord = int.Parse(inputX);
+    //     return coord;
+    //   }
+    //     public void InputQY()
+    //   {
+    //     Console.WriteLine("Enter Queen's Y coordinate");
+    //     string inputX = Console.ReadLine();
+    //     int coord = int.Parse(inputX);
+    //     return coord;
+    //   }
+    //   public void InputTX()
+    //   {
+    //     Console.WriteLine("Enter target's X coordinate");
+    //     string inputX = Console.ReadLine();
+    //     int coord = int.Parse(inputX);
+    //     return coord;
+    //   }
+    //   public void InputTY()
+    //   {
+    //     Console.WriteLine("Enter target's Y coordinate");
+    //     string inputX = Console.ReadLine();
+    //     int coord = int.Parse(inputX);
+    //     return coord;
+    //   }
+    // }      
   }
 }
 
-
-    // business logic
-   // Dictionary<string, int> QueenPosition = new Dictionary<string, int>();
-// // code where i stopped ---------------------------copied from Phat
-// using System.Collections.Generic;
-
-// // create a dictionary with string keys and int values
-// Dictionary<string, int> myDictionary = new Dictionary<string, int>();
-
-// // add key-value pairs to the dictionary
-// myDictionary.Add("x", qx);
-// myDictionary.Add("y", qy);
-
-// // access the values by key
-// int xValue = myDictionary["x"]; // returns qx
-// int yValue = myDictionary["y"]; // returns qy
-// //-------------------------------------------------
-
-// for (int i = 0; i < 8; i ++) 
-//       {
-//         int Qx = 5 + i;
-//         int Qy = 5 - i;
-//         if (Qx == 9 || Qy == 0) 
-//         {
-//           break;
-//         }
-//         Console.WriteLine(i);
-//         Console.WriteLine($"Qx = {Qx} Qy = {Qy}");
-//         QueenRein.Add(i+10, new Tuple<int, int>(Qx, Qy));
-//       }
