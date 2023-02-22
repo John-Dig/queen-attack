@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace QueenAttack.Models
 {
@@ -55,7 +56,7 @@ namespace QueenAttack.Models
     
     public Dictionary<int, Tuple<int, int>> QueenRein = new Dictionary<int, Tuple<int, int>>();
     
-    public void MakeQueenPoss()
+    public void QueenDiagAdd()
     {
       for (int i = 0; i < 8; i ++) // ++
       {

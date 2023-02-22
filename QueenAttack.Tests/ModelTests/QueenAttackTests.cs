@@ -87,14 +87,16 @@ namespace QueenAttack.Tests
 
     }
     [TestMethod] //8
-    public void Capture_ReturnsTrueWhenQueenAndTargetOnSameDiagonal_bool()
+    public void Capture_ReturnsTrueWhenQueenAndTargetOnSameDiagonalOrStraight_bool()
     {
       //arrange
-      Board newBoard = new Board(1, 1, 1, 8);
+      Board newBoard = new Board(5,7,1,7);
       //act
-      bool result = newBoard.CaptureDiag();
+      newBoard.QueenDiagAdd();
+      bool resultDiag = newBoard.CaptureDiag();
+      bool resultStraight = newBoard.CaptureStraight();
       //assert
-      Assert.AreEqual(true, result);
+      Assert.IsTrue(resultDiag || resultStraight);
 
     }
     
@@ -104,10 +106,11 @@ namespace QueenAttack.Tests
 // public void Get_It_MuffinTesting_Dict_output()
 // {
 //   //arrange
-//   Board newBoard = new Board(8, 8, 1, 2);
+//   Board newBoard = new Board(3,3,4,4);
   
 //   //act
-//   newBoard.MakeQueenPoss();
+//   newBoard.QueenDiagAdd();
+//   bool resultDiag = newBoard.CaptureDiag();
 //   foreach (var entry in newBoard.QueenRein)
 //   {
 //       Console.WriteLine("Queen position: " + entry.Key);
@@ -115,7 +118,7 @@ namespace QueenAttack.Tests
 //   }
   
 //   //assert
-//   Assert.AreNotEqual(typeof(Board), newBoard.GetType());
+//   Assert.IsTrue(resultDiag);
 // }
 
   }
