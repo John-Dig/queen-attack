@@ -87,19 +87,36 @@ namespace QueenAttack.Tests
 
     }
     [TestMethod] //8
-    public void DiagonalCapture_ReturnsTrueWhenQueenAndTargetOnSameDiagonal_bool()
+    public void Capture_ReturnsTrueWhenQueenAndTargetOnSameDiagonal_bool()
     {
       //arrange
-      Board newBoard = new Board(1, 1, 8, 8);
+      Board newBoard = new Board(1, 1, 1, 8);
       //act
       bool result = newBoard.Capture();
       //assert
       Assert.AreEqual(true, result);
 
     }
-    // arrange
-    // act
-    // assert
-
+    [TestMethod] //quick test
+    public void Get_It_MuffinTesting_Dict_output()
+    {
+      //arrange
+      Board newBoard = new Board(1, 1, 1, 2);
+      //act
+      newBoard.MakeQueenPoss();
+      //assert  
+      Console.WriteLine(newBoard.QueenPossibilities);
+    }
+      
+    // [TestMethod] //9
+    // public void QueenPossibilities_ReturnsDictionaryOfPossibleMoves_Dictionary()
+    // {
+    //   // arrange
+    //   Board newBoard = new Board(1, 1, 8, 8);
+    //   // act
+      
+    //   // assert
+    //   Assert.AreEqual(typeof(Board), newBoard.GetType());
+    
   }
 }

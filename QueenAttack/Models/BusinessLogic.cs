@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace QueenAttack.Models
@@ -52,9 +53,56 @@ namespace QueenAttack.Models
       }
     }
     
+    public Dictionary<int, Tuple<int, int>> QueenPossibilities = new Dictionary<int, Tuple<int, int>>();
+    
+    public void MakeQueenPoss()
+    {
+      for (int i = 0; i < 8; i ++)
+      {
+        int Qx = QueenX + i;
+        int Qy = QueenY + i;
+        if (Qx == 8 || Qy == 8) 
+        {
+          break;
+        }
+        QueenPossibilities.Add(i, new Tuple<int, int>(Qx, Qy));
+      }
+      for (int i = 0; i < 8; i ++) 
+      {
+        int Qx = QueenX + i;
+        int Qy = QueenY - i;
+        if (Qx == 8 || Qy == 0) 
+        {
+          break;
+        }
+        QueenPossibilities.Add(i, new Tuple<int, int>(Qx, Qy));
+      }
+      for (int i = 0; i < 8; i ++) 
+      {
+        int Qx = QueenX - i;
+        int Qy = QueenY + i;
+        if (Qx == 0 || Qy == 8) 
+        {
+          break;
+        }
+        QueenPossibilities.Add(i, new Tuple<int, int>(Qx, Qy));
+      }
+      for (int i = 0; i < 8; i ++) 
+      {
+        int Qx = QueenX - i;
+        int Qy = QueenY - i;
+        if (Qx == 0 || Qy == 0) 
+        {
+          break;
+        }
+        QueenPossibilities.Add(i, new Tuple<int, int>(Qx, Qy));
+      }    
+    }
+
 
   }
 }
+
 
     // business logic
    // Dictionary<string, int> QueenPosition = new Dictionary<string, int>();
