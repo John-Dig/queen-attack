@@ -41,7 +41,7 @@ namespace QueenAttack.Models
       _targetY = targetCoordinateY;
     }
     
-    public bool Capture()
+    public bool CaptureStraight()
     {
       if (QueenX == TargetX || QueenY == TargetY)
       {
@@ -53,41 +53,41 @@ namespace QueenAttack.Models
       }
     }
     
-    public Dictionary<int, Tuple<int, int>> QueenPossibilities = new Dictionary<int, Tuple<int, int>>();
+    public Dictionary<int, Tuple<int, int>> QueenRein = new Dictionary<int, Tuple<int, int>>();
     
     public void MakeQueenPoss()
     {
-      for (int i = 0; i < 8; i ++)
+      for (int i = 0; i < 8; i ++) // ++
       {
         int Qx = QueenX + i;
         int Qy = QueenY + i;
-        if (Qx == 8 || Qy == 8) 
+        if (Qx == 9 || Qy == 9) 
         {
           break;
         }
-        QueenPossibilities.Add(i, new Tuple<int, int>(Qx, Qy));
+        QueenRein.Add(i, new Tuple<int, int>(Qx, Qy));
       }
-      for (int i = 0; i < 8; i ++) 
+      for (int i = 0; i < 8; i ++) // +-
       {
         int Qx = QueenX + i;
         int Qy = QueenY - i;
-        if (Qx == 8 || Qy == 0) 
+        if (Qx == 9 || Qy == 0) 
         {
           break;
         }
-        QueenPossibilities.Add(i, new Tuple<int, int>(Qx, Qy));
+        QueenRein.Add(i+10, new Tuple<int, int>(Qx, Qy));
       }
-      for (int i = 0; i < 8; i ++) 
+      for (int i = 0; i < 8; i ++)  // -+
       {
         int Qx = QueenX - i;
         int Qy = QueenY + i;
-        if (Qx == 0 || Qy == 8) 
+        if (Qx == 0 || Qy == 9) 
         {
           break;
         }
-        QueenPossibilities.Add(i, new Tuple<int, int>(Qx, Qy));
+        QueenRein.Add(i+20, new Tuple<int, int>(Qx, Qy));
       }
-      for (int i = 0; i < 8; i ++) 
+      for (int i = 0; i < 8; i ++) // --
       {
         int Qx = QueenX - i;
         int Qy = QueenY - i;
@@ -95,11 +95,16 @@ namespace QueenAttack.Models
         {
           break;
         }
-        QueenPossibilities.Add(i, new Tuple<int, int>(Qx, Qy));
+        QueenRein.Add(i+30, new Tuple<int, int>(Qx, Qy));
       }    
     }
-
-
+    public bool CaptureDiag()
+    {
+    bool Capture = QueenRein.Values.Any(tuple => tuple.Item1 == TargetX && tuple.Item2 == TargetY);
+    {
+      return Capture;
+    }
+    }
   }
 }
 
@@ -120,3 +125,16 @@ namespace QueenAttack.Models
 // int xValue = myDictionary["x"]; // returns qx
 // int yValue = myDictionary["y"]; // returns qy
 // //-------------------------------------------------
+
+// for (int i = 0; i < 8; i ++) 
+//       {
+//         int Qx = 5 + i;
+//         int Qy = 5 - i;
+//         if (Qx == 9 || Qy == 0) 
+//         {
+//           break;
+//         }
+//         Console.WriteLine(i);
+//         Console.WriteLine($"Qx = {Qx} Qy = {Qy}");
+//         QueenRein.Add(i+10, new Tuple<int, int>(Qx, Qy));
+//       }

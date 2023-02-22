@@ -81,7 +81,7 @@ namespace QueenAttack.Tests
       //arrange
       Board newBoard = new Board(1, 4, 5, 4);
       //act 
-      bool result = newBoard.Capture();
+      bool result = newBoard.CaptureStraight();
       //assert
       Assert.AreEqual(true, result);
 
@@ -92,31 +92,31 @@ namespace QueenAttack.Tests
       //arrange
       Board newBoard = new Board(1, 1, 1, 8);
       //act
-      bool result = newBoard.Capture();
+      bool result = newBoard.CaptureDiag();
       //assert
       Assert.AreEqual(true, result);
 
     }
-    [TestMethod] //quick test
-    public void Get_It_MuffinTesting_Dict_output()
-    {
-      //arrange
-      Board newBoard = new Board(1, 1, 1, 2);
-      //act
-      newBoard.MakeQueenPoss();
-      //assert  
-      Console.WriteLine(newBoard.QueenPossibilities);
-    }
-      
-    // [TestMethod] //9
-    // public void QueenPossibilities_ReturnsDictionaryOfPossibleMoves_Dictionary()
-    // {
-    //   // arrange
-    //   Board newBoard = new Board(1, 1, 8, 8);
-    //   // act
-      
-    //   // assert
-    //   Assert.AreEqual(typeof(Board), newBoard.GetType());
     
+  
+//phat test
+// [TestMethod]
+// public void Get_It_MuffinTesting_Dict_output()
+// {
+//   //arrange
+//   Board newBoard = new Board(8, 8, 1, 2);
+  
+//   //act
+//   newBoard.MakeQueenPoss();
+//   foreach (var entry in newBoard.QueenRein)
+//   {
+//       Console.WriteLine("Queen position: " + entry.Key);
+//       Console.WriteLine("Possible moves: " + string.Join(",", entry.Value));
+//   }
+  
+//   //assert
+//   Assert.AreNotEqual(typeof(Board), newBoard.GetType());
+// }
+
   }
 }
