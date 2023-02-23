@@ -8,7 +8,7 @@
 * dotnet
 
 ## Description
-  Returns If the queen is able to attack target. Follow the prompt, get your answer.  Coordinates must be entered by numbers for x and y, not traditional chess notation.
+  It's a chess related tool.  It returns If the queen is able to attack target. Follow the prompt, get your answer.  Coordinates must be entered by numbers for x and y, not traditional chess notation.
 
 ### Setup Instructions
 
