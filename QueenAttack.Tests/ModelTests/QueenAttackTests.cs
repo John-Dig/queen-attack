@@ -87,16 +87,14 @@ namespace QueenAttack.Tests
 
     }
     [TestMethod] //8
-    public void Capture_ReturnsTrueWhenQueenAndTargetOnSameDiagonalOrStraight_bool()
+    public void EvaluateBoth_ReturnsCorrectLogic_String()
     {
       //arrange
-      Board newBoard = new Board(5,7,1,7);
+      Board newBoard = new Board(5,7,1,8);
       //act
-      newBoard.QueenDiagAdd();
-      bool resultDiag = newBoard.CaptureDiag();
-      bool resultStraight = newBoard.CaptureStraight();
+      string result = newBoard.EvaluateBoth();
       //assert
-      Assert.IsTrue(resultDiag || resultStraight);
+      Assert.AreEqual("You're safe.", result);
 
     }
   }

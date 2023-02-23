@@ -114,8 +114,6 @@ namespace QueenAttack.Models
       bool straight = CaptureStraight();
       if (diag == true || straight == true)
       {
-        Console.WriteLine($"straight {straight}");
-        Console.WriteLine($"diagonal {diag}");
         return "Queen Captures!!!";
       }
       else
