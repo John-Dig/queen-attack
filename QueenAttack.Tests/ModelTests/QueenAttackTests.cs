@@ -99,43 +99,5 @@ namespace QueenAttack.Tests
       Assert.IsTrue(resultDiag || resultStraight);
 
     }
-    [TestMethod] //9 THIS WILL NEED TO BE RE WRITTEN-------------~_~_~_~__~_
-    public void InputXX_CreatesNewBoardWithAllCoordinates_value();
-    {
-      //arrange
-      Board newBoard = new Board(0,0,0,0);
-      //act
-      int qX = newBoard.InputQX();
-      int qY = newBoard.InputQY();
-      int tX = newBoard.InputTX();
-      int tY = newBoard.InputTY();
-
-      Board gameBoard = new Board (qX, qY, tX, tY);
-
-      //assert
-
-
-    }
-  
-//for checking Dictionary values
-// [TestMethod]
-// public void Get_It_MuffinTesting_Dict_output()
-// {
-//   //arrange
-//   Board newBoard = new Board(3,3,4,4);
-  
-//   //act
-//   newBoard.QueenDiagAdd();
-//   bool resultDiag = newBoard.CaptureDiag();
-//   foreach (var entry in newBoard.QueenRein)
-//   {
-//       Console.WriteLine("Queen position: " + entry.Key);
-//       Console.WriteLine("Possible moves: " + string.Join(",", entry.Value));
-//   }
-  
-//   //assert
-//   Assert.IsTrue(resultDiag);
-// }
-
   }
-}
+}    

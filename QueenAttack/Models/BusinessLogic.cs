@@ -101,23 +101,29 @@ namespace QueenAttack.Models
     }
     public bool CaptureDiag()
     {
+      QueenDiagAdd();
       bool Capture = QueenRein.Values.Any(tuple => tuple.Item1 == TargetX && tuple.Item2 == TargetY);
       {
         return Capture;
       }
     }
     //change type
-    public bool EvaluateBoth(bool a, bool b)
+    public string EvaluateBoth()
     {
-      if (a == true || b == true)
+      bool diag = CaptureDiag();
+      bool straight = CaptureStraight();
+      if (diag == true || straight == true)
       {
-        return true;
+        Console.WriteLine($"straight {straight}");
+        Console.WriteLine($"diagonal {diag}");
+        return "Queen Captures!!!";
       }
       else
       {
-        return false;
+        return "You're safe.";
       }
     }
+
     // newMethod() //need to rewrite this 
     // {
     //   public void InputQX()

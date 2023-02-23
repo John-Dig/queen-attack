@@ -24,9 +24,7 @@ namespace QueenAttack
       newBoard.QueenY = int.Parse(two);
       newBoard.TargetX = int.Parse(three);
       newBoard.TargetY = int.Parse(four);
-      newBoard.QueenDiagAdd();
-      Console.WriteLine(newBoard.EvaluateBoth(newBoard.CaptureDiag(), newBoard.CaptureStraight()));
-
+      Console.WriteLine(newBoard.EvaluateBoth());
     }
   }
 }
